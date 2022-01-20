@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Technical Documentation Page</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<meta charset="utf-8">	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav id="navbar">
+		<header>HTML5 Basics</header>
+		<ul>
+			<li><a class="nav-link" href="#Overview">Overview</a></li>
+			<li><a class="nav-link" href="#Structure">Structure</a></li>
+			<li><a class="nav-link" href="#Lists-in-HTML">Lists in HTML</a></li>
+			<li><a class="nav-link" href="#Forms-in-HTML">Forms in HTML</a></li>
+			<li><a class="nav-link" href="#Multimedia-in-HTML">Multimedia in HTML</a></li>
+			<li><a class="nav-link" href="#Reference">Reference</a></li>
+		</ul>
+	</nav>
+	<main id="main-doc">
+		<section class="main-section" id="Overview">
+			<header id="top">Overview</header>
+			<article>
+				<p>HTML is a markup language that is used for the development of Internet pages. It is the acronym that corresponds to HyperText Markup Language, and is used to indicate how the content of a web page is ordered, and it can be done through hypertext marks, or "tags".</p>
+				<p>To understand how they work, we can imagine that we have to do an essay about a topic, we will consider the essay to be our website and it is ordered like this: title, introduction, development and conclusion, if we take into account that this tells us how our essay should go, we can consider that these would be the labels because they tell us the structure it carries.<br>
+				Now, we can move on to learn to identify them. The tags are characterized by going within the signs "less than" <, and "greater than">, denoting that <code id="eg"> < here will be the tag > </code></p>
+			</article>
+		</section><br>
+		<section class="main-section" id="Structure">
+			<header>Structure</header>
+			<article>
+				<p>First of all, most tags should have a beginning and an end. The beginning of a tag is normal, in other words it has the two characters mentioned in the previous section and within these is the name, however, there is a difference for the end of the tag since before writing the name of the tag we must write a diagonal /. Like in this example:</p>
+					<code class="code">< start of the tag><br>< /end of the tag></code>
+				<p>There are certain exceptions with the end of the labels, since some are usually only used with the beginning of the tag, examples of this are the labels BR (line break), IMG (tag to put an image), among others.</p>
+			</article>
+		</section><br>
+		<section class="main-section" id="Lists-in-HTML">
+			<header>Lists in HTML</header>
+			<article>
+				<p>HTML lists allow web developers to group a set of related items into lists with different characteristics, as shown below</p>
+				<ul>
+					<li><strong>Unordered HTML List</strong> - An unordered list starts with the < ul> tag. Each list item starts with the < li> tag. The list items will be marked with bullets (small black circles) by default:</li>
+						<code class="code">< ul>
+						< li>Coffee< /li>
+						< li>Tea< /li>
+						< li>Milk< /li>
+						< /ul></code>
+					<li><strong>Ordered HTML List</strong> - An ordered list starts with the < ol> tag. Each list item starts with the < li> tag. The list items will be marked with numbers by default:</li>
+						<code class="code">< ol>
+							< li>Coffee< /li>
+							< li>Tea< /li>
+							< li>Milk< /li>
+							< /ol></code>
+					<li><strong>HTML Description Lists</strong> - HTML also supports description lists. A description list is a list of terms, with a description of each term. The < dl> tag defines the description list, the < dt> tag defines the term (name), and the < dd> tag describes each term:</li>
+					<code class="code">< dl>
+						< dt>Coffee< /dt>
+						< dd>- black hot drink< /dd>
+						< dt>Milk< /dt>
+						< dd>- white cold drink< /dd>
+						< /dl></code>
+				</ul>
+			</article>
+		</section>
+		<section class="main-section" id="Forms-in-HTML">
+			<header>Forms in HTML</header>
+			<article>
+				<p>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+				<header>Example:</header>
+				<div class="caja">
+					<form>
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name"><br>
+						<label for="Surname">Surname</label>
+						<input type="text" id="surname" name="Surname"><br>
+						<input type="submit" name="submit" value="submit">
+					</form>
+				</div>
+				<ul>
+					<li><strong>The < form> Element</strong><p>Is used to create an HTML form for user input:</p></li>
+						<code class="code">< form>
+							.
+							.
+							form_elements
+							.
+							.
+							< /form>
+						</code>
+						<p>The < form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+					<li><strong>The < input> Element</strong><p>Is the most used form element, it can be displayed in many ways, depending on the type attribute. Here are some examples:</p></li>
+					<table id="grid">
+						<tbody>
+							<tr>
+								<th>Type</th><th>Description</th>
+							</tr>
+							<tr>
+								<td>< input type="text"></td><td>Displays a single-line text input field</td>
+							</tr>
+							<tr>
+								<td>< input type="radio"></td><td>Displays a radio button (for selecting one of many choices)</td>
+							</tr>
+							<tr>
+								<td>< input type="checkbox"></td><td>Displays a checkbox (for selecting zero or more of many choices)</td>
+							</tr>
+							<tr>
+								<td>< input type="submit"></td><td>Displays a submit button (for submitting the form)</td>
+							</tr>
+							<tr>
+								<td>< input type="button"></td><td>Displays a clickable button</td>
+							</tr>
+						</tbody>
+					</table>
+					<code class="code">< form>
+						< label for="fname">First name:< /label>< br>
+						< input type="text" id="fname" name="fname">< br>
+						< label for="lname">Last name:< /label>< br>
+						< input type="text" id="lname" name="lname">
+						< /form></code>
+					<li><strong>The < label> Element</strong><p>Notice the use of the < label> element in the example above. The < label> tag defines a label for many form elements. The < label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element. The < label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the < label> element, it toggles the radio button/checkbox. The for attribute of the < label> tag should be equal to the id attribute of the < input> element to bind them together.</p></li>
+				</ul>
+			</article>
+		</section>
+		<section class="main-section" id="Multimedia-in-HTML">
+			<header>Multimedia in HTML</header>
+			<article>
+				<p>Multimedia on the web is sound, music, videos, movies, and animations.</p>
+				<ul>
+					<li><strong>What is Multimedia?</strong><p>Multimedia comes in many different formats. It can be almost anything you can hear or see, like images, music, sound, videos, records, films, animations, and more.<br>Web pages often contain multimedia elements of different types and formats.</p></li>
+					<li><strong>Browser Support</strong><p>The first web browsers had support for text only, limited to a single font in a single color.Later came browsers with support for colors, fonts, images, and multimedia!</p></li>
+					<li><strong>Multimedia Formats</strong><p>Multimedia elements (like audio or video) are stored in media files. The most common way to discover the type of a file, is to look at the file extension. Multimedia files have formats and different extensions like: .wav, .mp3, .mp4, .mpg, .wmv, and .avi.</p></li>
+			</article>
+		</section>
+		<button><a href="#top" id="back-to-top">Back to top</a></button>	
+		<section class="main-section" id="Reference">
+   			<header>Reference</header>
+    		<article>
+    			<ul>
+    				<li>All the documentation in this page is taken from<a href="https://www.w3schools.com/" target="_blank"> w3schools.com</a></li>
+    			</ul>
+    		</article>
+    	</section>
+	</main>
+</body>
+</html>
